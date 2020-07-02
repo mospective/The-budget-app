@@ -1,0 +1,134 @@
+@function strip-unit($value) {
+    @return $value / ($value * 0 + 1);
+  }
+  
+  @mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+    $u1: unit($min-vw);
+    $u2: unit($max-vw);
+    $u3: unit($min-font-size);
+    $u4: unit($max-font-size);
+  
+    @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+      & {
+        font-size: $min-font-size;
+        @media screen and (min-width: $min-vw) {
+          font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+        }
+        @media screen and (min-width: $max-vw) {
+          font-size: $max-font-size;
+        }
+      }
+    }
+  }
+
+
+  //mobile screens
+$mobile: 480px;
+//>mobile < tablet
+$phablet: 640px;
+//small tablet portrait view
+$tablet: 768px;
+//tablets and small desktop
+$desktop: 992px;
+//large screens
+$large-screen: 1200px;
+//< screens
+$max1400: 1400px;
+//larger screens
+$super-large: 1440px;
+
+// Small devices
+@mixin mobile {
+    @media (max-width: #{$mobile}) {
+        @content;
+    }
+ }
+
+ // Phablet size
+@mixin phablet {
+    @media (max-width: #{$phablet}) {
+        @content;
+    }
+ }
+ 
+ // Medium devices
+ @mixin tablet {
+    @media (max-width: #{$tablet}) {
+        @content;
+    }
+ }
+ 
+ // Large devices
+ @mixin desktop {
+    @media (max-width: #{$desktop}) {
+        @content;
+    }
+ }
+ 
+ // Extra large devices
+ @mixin large{
+    @media (max-width: #{$large-screen}) {
+        @content;
+    }
+ }
+
+ @mixin under-superlarge{
+    @media (max-width: #{$max1400}) {
+        @content;
+    }
+ }
+
+ @mixin superlarge{
+    @media (min-width: #{$super-large}) {
+        @content;
+    }
+ }
+// custom screen
+ @mixin rwd($screen) {
+    @media (min-width: $screen+'px') {
+        @content;
+    }
+ }
+
+ @mixin ipad-mini {
+    @media only screen 
+    and (min-device-width: 768px) 
+    and (max-device-width: 1024px) 
+    and (-webkit-min-device-pixel-ratio: 1) {
+        @content;
+  }
+ }
+
+ @mixin ipad-pro {
+    @media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    @content;
+    }
+ }
+
+ @mixin ie-layout {
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        @content;
+     }
+ }
+
+ //responsive font
+$min_width: 320px;
+$max_width: 1200px;
+$min_font: 16px;
+$max_font: 24px;
+
+// Fonts
+
+$roboto: 'Roboto', sans-serif;
+$till: 'Titillium Web', sans-serif;
+
+// Colours
+$darkteal: #034b61;
+$lightteal: #0586ad;
+$btn: #03d1d1;
+$input: #04627f;
+$lightgreen: #29fdfd;
+$darkred: #971617;

@@ -1,0 +1,701 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html body {
+  background-color: #0586ad;
+  font-size: 16px;
+}
+
+html body {
+  font-size: 16px;
+}
+
+@media screen and (min-width: 320px) {
+  html body {
+    font-size: calc(16px + 8 * ((100vw - 320px) / 880));
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  html body {
+    font-size: 24px;
+  }
+}
+
+html body header {
+  background-color: #034b61;
+  height: 70px;
+  -webkit-box-shadow: 0px 18px 25px 0px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 18px 25px 0px rgba(0, 0, 0, 0.08);
+}
+
+html body header .inner-container {
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html body header .inner-container h1 {
+  color: #ffffff;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 400;
+  font-size: 1.5em;
+}
+
+html body article #date__budget {
+  padding: 2em 2em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html body article #date__budget #date {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 400;
+  font-size: 0.875em;
+  margin-bottom: 1em;
+}
+
+html body article #date__budget #current_budget {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 400;
+  font-size: 2.083em;
+}
+
+html body article #cash_flow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+html body article #cash_flow .inner-container {
+  width: 540px;
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+html body article #cash_flow .inner-container .income__container {
+  width: 24%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html body article #cash_flow .inner-container .income__container .img-icon {
+  width: 40px;
+  height: 60px;
+}
+
+html body article #cash_flow .inner-container .income__container p {
+  color: #ffffff;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 400;
+  font-size: 0.917em;
+  margin-bottom: 0.5em;
+}
+
+html body article #cash_flow .inner-container .income__container #inc {
+  color: #ffffff;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 400;
+  font-size: 1.25em;
+}
+
+html body article #cash_flow .inner-container .switch {
+  width: 35%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html body article #cash_flow .inner-container .switch p {
+  color: #ffffff;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 400;
+  font-size: 0.667em;
+  margin-bottom: 1em;
+}
+
+html body article #cash_flow .inner-container .switch button {
+  border: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 1.5em;
+  -webkit-box-shadow: 0px 18px 25px 0px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 18px 25px 0px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html body article #cash_flow .inner-container .switch button:focus {
+  outline: none;
+}
+
+html body article #cash_flow .inner-container .switch button svg {
+  width: 25px;
+  max-width: 100%;
+  height: auto;
+  fill: #ffffff;
+}
+
+html body article #cash_flow .inner-container .switch button.inc {
+  background-color: #03d1d1;
+}
+
+html body article #cash_flow .inner-container .switch button.exp {
+  background-color: #971617;
+}
+
+html body article #cash_flow .inner-container .switch button:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: 0px 15px 45px 0px rgba(0, 0, 0, 0.28);
+          box-shadow: 0px 15px 45px 0px rgba(0, 0, 0, 0.28);
+}
+
+html body article #cash_flow .inner-container .expense__container {
+  width: 24%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html body article #cash_flow .inner-container .expense__container .img-icon {
+  width: 50px;
+  height: 60px;
+}
+
+html body article #cash_flow .inner-container .expense__container p {
+  color: #ffffff;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 400;
+  font-size: 0.917em;
+  margin-bottom: 0.5em;
+}
+
+html body article #cash_flow .inner-container .expense__container .exp #exp {
+  color: #ffffff;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 400;
+  font-size: 1.25em;
+  float: left;
+}
+
+html body article #cash_flow .inner-container .expense__container .exp #exp::after, html body article #cash_flow .inner-container .expense__container .exp #exp::before {
+  clear: both;
+}
+
+html body article #cash_flow .inner-container .expense__container .exp .percentage {
+  font-family: "Titillium Web", sans-serif;
+  margin-left: 0.5em;
+  font-size: 12px;
+  padding: 0.25em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+@media (max-width: 640px) {
+  html body article #cash_flow .inner-container {
+    padding: 0 1em;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+}
+
+@media (max-width: 480px) {
+  html body article #cash_flow .inner-container .income__container .img-icon {
+    width: 28px;
+    height: 40px;
+  }
+  html body article #cash_flow .inner-container .switch {
+    width: 40%;
+  }
+  html body article #cash_flow .inner-container .switch button {
+    width: 60px;
+    height: 60px;
+  }
+  html body article #cash_flow .inner-container .expense__container .img-icon {
+    width: 35px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) and (max-width: 440px) {
+  html body article #cash_flow .inner-container .expense__container .exp #exp {
+    float: none;
+  }
+  html body article #cash_flow .inner-container .expense__container .exp .percentage {
+    display: block;
+    margin-top: 0.5em;
+    text-align: center;
+  }
+}
+
+@media (max-width: 340px) {
+  html body article #cash_flow .inner-container .switch {
+    width: 45%;
+  }
+}
+
+html body article .input-fields {
+  margin-top: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 2em;
+}
+
+html body article .input-fields .inner-container {
+  width: 540px;
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+html body article .input-fields .inner-container #add__description {
+  width: 65%;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  padding: 0.7em 1.2em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #04627f;
+  color: #ffffff;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 0.542em;
+}
+
+html body article .input-fields .inner-container #add__description::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+html body article .input-fields .inner-container #add__description:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+html body article .input-fields .inner-container #add__description::-ms-input-placeholder {
+  color: #ffffff;
+}
+
+html body article .input-fields .inner-container #add__description::placeholder {
+  color: #ffffff;
+}
+
+html body article .input-fields .inner-container #add__description:focus {
+  outline: none;
+}
+
+html body article .input-fields .inner-container #add__description.income {
+  border: 1px solid #29fdfd;
+}
+
+html body article .input-fields .inner-container #add__description.expense {
+  border: 1px solid #971617;
+}
+
+html body article .input-fields .inner-container #add__value {
+  width: 22%;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  padding: 0.7em 1.2em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #04627f;
+  color: #ffffff;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 0.542em;
+}
+
+html body article .input-fields .inner-container #add__value::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+html body article .input-fields .inner-container #add__value:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+html body article .input-fields .inner-container #add__value::-ms-input-placeholder {
+  color: #ffffff;
+}
+
+html body article .input-fields .inner-container #add__value::placeholder {
+  color: #ffffff;
+}
+
+html body article .input-fields .inner-container #add__value::-webkit-outer-spin-button, html body article .input-fields .inner-container #add__value::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+html body article .input-fields .inner-container #add__value[type=number] {
+  -moz-appearance: textfield;
+}
+
+html body article .input-fields .inner-container #add__value:focus {
+  outline: none;
+}
+
+html body article .input-fields .inner-container #add__value.income {
+  border: 1px solid #29fdfd;
+}
+
+html body article .input-fields .inner-container #add__value.expense {
+  border: 1px solid #971617;
+}
+
+html body article .input-fields .inner-container #add__btn {
+  border: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #03d1d1;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+html body article .input-fields .inner-container #add__btn:focus {
+  outline: none;
+}
+
+html body article .input-fields .inner-container #add__btn svg {
+  max-width: 100%;
+  height: auto;
+  fill: #ffffff;
+}
+
+html body article .input-fields .inner-container #add__btn:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+@media (max-width: 640px) {
+  html body article .input-fields .inner-container {
+    padding: 0 1em;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+}
+
+@media (max-width: 480px) {
+  html body article .input-fields .inner-container #add__description {
+    width: 55%;
+  }
+  html body article .input-fields .inner-container #add__value {
+    width: 25%;
+  }
+}
+
+html body article .main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+html body article .main .inner-container {
+  width: 540px;
+  max-width: 100%;
+}
+
+html body article .main .inner-container .income {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0.5em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html body article .main .inner-container .income .item__description {
+  width: 55%;
+  color: #ffffff;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 0.75em;
+}
+
+html body article .main .inner-container .income .item__value {
+  width: 38%;
+  text-align: right;
+  color: #29fdfd;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 0.75em;
+}
+
+html body article .main .inner-container .income .item__delete {
+  width: 17px;
+  height: inherit;
+}
+
+html body article .main .inner-container .income .item__delete button {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  height: inherit;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  cursor: pointer;
+}
+
+html body article .main .inner-container .income .item__delete button:focus {
+  outline: none;
+}
+
+html body article .main .inner-container .income .item__delete button > * {
+  pointer-events: none;
+}
+
+html body article .main .inner-container .income .item__delete button svg {
+  margin-top: 2px;
+  max-width: 100%;
+  height: auto;
+  fill: #971617;
+}
+
+html body article .main .inner-container .income .item__delete button:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+html body article .main .inner-container .expense {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0.5em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html body article .main .inner-container .expense .item__description {
+  width: 55%;
+  color: #ffffff;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 0.75em;
+}
+
+html body article .main .inner-container .expense .item__value {
+  width: 32%;
+  text-align: right;
+  color: #971617;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 0.75em;
+}
+
+html body article .main .inner-container .expense .item__delete {
+  width: 17px;
+  height: inherit;
+}
+
+html body article .main .inner-container .expense .item__delete button {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  height: inherit;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  z-index: 5;
+  cursor: pointer;
+}
+
+html body article .main .inner-container .expense .item__delete button > * {
+  pointer-events: none;
+}
+
+html body article .main .inner-container .expense .item__delete button svg {
+  margin-top: 2px;
+  max-width: 100%;
+  height: auto;
+  fill: #971617;
+  z-index: 0;
+}
+
+html body article .main .inner-container .expense .item__delete button:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+html body article .main .inner-container .expense .item__percentage {
+  color: #ffffff;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 0.5em;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 0.5em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 1em;
+  border-radius: 20px;
+}
+
+@media (max-width: 640px) {
+  html body article .main .inner-container {
+    padding: 0 1em;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  html body article .main .inner-container .income .item__description,
+  html body article .main .inner-container .expense .item__description {
+    width: 45%;
+  }
+}
