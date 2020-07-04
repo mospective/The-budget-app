@@ -64,14 +64,14 @@ html {
         justify-content: center;
 
         .inner-container {
-          width: 540px;
+          width: 650px;
           max-width: 100%;
           display: flex;
           flex-flow: wrap;
           justify-content: space-between;
 
           .income__container {
-            width: 24%;
+            width: 28%;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -156,7 +156,7 @@ html {
           }
 
           .expense__container {
-            width: 24%;
+            width: 28%;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -214,6 +214,7 @@ html {
                 width: 28px;
                 height: 40px;
               }
+              font-size: 0.8em;
             }
 
             .switch {
@@ -231,10 +232,13 @@ html {
                 width: 35px;
                 height: 40px;
               }
+              font-size: 0.8em;
               .exp {
+             
                 @media(max-width:440px) {
                   #exp {
                     float: none;
+                    
                   }
                   .percentage {
                     display: block;
@@ -249,7 +253,10 @@ html {
 
           @media(max-width: 340px) {
             .switch {
-              width: 45%;
+              width: 40%;
+            }
+            .expense__container .exp #exp, .income__container #inc {
+              font-size: 0.9em;
             }
           }
         }
@@ -263,7 +270,7 @@ html {
         margin-bottom: 2em;
 
         .inner-container {
-          width: 540px;
+          width: 650px;
           max-width: 100%;
           display: flex;
           justify-content: space-between;
@@ -387,7 +394,7 @@ html {
         justify-content: center;
 
         .inner-container {
-          width: 540px;
+          width: 650px;
           max-width: 100%;
 
           .income {

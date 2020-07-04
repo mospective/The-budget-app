@@ -138,7 +138,7 @@ html body article #cash_flow {
 }
 
 html body article #cash_flow .inner-container {
-  width: 540px;
+  width: 650px;
   max-width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -151,7 +151,7 @@ html body article #cash_flow .inner-container {
 }
 
 html body article #cash_flow .inner-container .income__container {
-  width: 24%;
+  width: 28%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -262,7 +262,7 @@ html body article #cash_flow .inner-container .switch button:hover {
 }
 
 html body article #cash_flow .inner-container .expense__container {
-  width: 24%;
+  width: 28%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -321,6 +321,9 @@ html body article #cash_flow .inner-container .expense__container .exp .percenta
 }
 
 @media (max-width: 480px) {
+  html body article #cash_flow .inner-container .income__container {
+    font-size: 0.8em;
+  }
   html body article #cash_flow .inner-container .income__container .img-icon {
     width: 28px;
     height: 40px;
@@ -331,6 +334,9 @@ html body article #cash_flow .inner-container .expense__container .exp .percenta
   html body article #cash_flow .inner-container .switch button {
     width: 60px;
     height: 60px;
+  }
+  html body article #cash_flow .inner-container .expense__container {
+    font-size: 0.8em;
   }
   html body article #cash_flow .inner-container .expense__container .img-icon {
     width: 35px;
@@ -351,7 +357,10 @@ html body article #cash_flow .inner-container .expense__container .exp .percenta
 
 @media (max-width: 340px) {
   html body article #cash_flow .inner-container .switch {
-    width: 45%;
+    width: 40%;
+  }
+  html body article #cash_flow .inner-container .expense__container .exp #exp, html body article #cash_flow .inner-container .income__container #inc {
+    font-size: 0.9em;
   }
 }
 
@@ -367,7 +376,7 @@ html body article .input-fields {
 }
 
 html body article .input-fields .inner-container {
-  width: 540px;
+  width: 650px;
   max-width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -532,7 +541,7 @@ html body article .main {
 }
 
 html body article .main .inner-container {
-  width: 540px;
+  width: 650px;
   max-width: 100%;
 }
 
@@ -699,3 +708,4 @@ html body article .main .inner-container .expense .item__percentage {
     width: 45%;
   }
 }
+/*# sourceMappingURL=main.css.map */
