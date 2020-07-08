@@ -122,6 +122,28 @@ var budgetController = (function(){
                 percentage: data.percentage
             }
         },
+        // Local storage
+        // store data
+        storeData: function() {
+            localStorage.setItem('localData', JSON.stringify(data));
+        },
+        // delete data
+        deleteData: function() {
+            localStorage.removeItem('localData');
+        },
+        // retrieve the stored data
+        getStoredData: function() {
+            var stData = JSON.parse(localStorage.getItem('localData'));
+            return stData;
+        },
+        // update data
+        updataStoredData: function(storedData) {
+            data.totals = storedData.totals;
+            data.budget = storedData.budget;
+            data.percentage = storedData.percentage;
+
+        },
+
         testing: function() {
             console.log(data);
         }
@@ -315,6 +337,33 @@ var appController = (function(bdCtlr,uiCtlr){
         document.querySelector(DOM.container).addEventListener('click', ctrlDeleteItem);
     };
 
+    // Dealing with local storage data
+    var loadData = function() {
+            var storedData, newItemAdd, oldExpItem;
+        // load local storage data
+            var storedData =  bdCtlr.getStoredData();
+            console.log(storedData);
+           if (storedData) { 
+        // Insert data to the current data structure
+            bdCtlr.updataStoredData(storedData);
+        // Create the income Object
+            storedData.allItems.inc.forEach(function(cur){
+                newItemAdd = bdCtlr.addItem('inc', cur.description, cur.value);
+                uiCtlr.addListItem(newItemAdd, 'inc');
+            });
+        // Create the expense objects
+        storedData.allItems.exp.forEach(function(cur){
+            oldExpItem = bdCtlr.addItem('exp', cur.description, cur.value);
+            uiCtlr.addListItem(oldExpItem, 'exp');
+        });
+        // Display budget
+        budget = bdCtlr.getBudget();
+        uiCtlr.displayBudget(budget);
+        // Display percentages
+        updatePercentages();
+        }
+    };
+
     var updatedBudget = function() {
 
         var budget;
@@ -347,6 +396,7 @@ var appController = (function(bdCtlr,uiCtlr){
             updatedBudget();
             // 5. Display the budget on the UI
             updatePercentages();
+            bdCtlr.storeData();
         }
 
     };
@@ -365,6 +415,7 @@ var appController = (function(bdCtlr,uiCtlr){
         }
         updatedBudget();
         updatePercentages();
+        bdCtlr.storeData();
         
     };
 
@@ -380,6 +431,7 @@ var appController = (function(bdCtlr,uiCtlr){
                 percentage: -1
             });          
             setupEventListeners();
+            loadData();
         }
     };
     
