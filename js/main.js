@@ -266,7 +266,7 @@ var UIController = (function(){
 
             nodeListForEach(fields, function(cur, index) {
                 if (percentages[index] > 0) {
-                    console.log(cur);
+                    // console.log(cur);
                     cur.textContent = percentages[index] + '%';
                 } else {
                     cur.textContent = '--';
@@ -342,7 +342,7 @@ var appController = (function(bdCtlr,uiCtlr){
             var storedData, newItemAdd, oldExpItem;
         // load local storage data
             var storedData =  bdCtlr.getStoredData();
-            console.log(storedData);
+            // console.log(storedData);
            if (storedData) { 
         // Insert data to the current data structure
             bdCtlr.updataStoredData(storedData);

@@ -222,8 +222,8 @@ html body article #cash_flow .inner-container .switch button {
   cursor: pointer;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  -webkit-transform: scale(1) rotate(0);
+          transform: scale(1) rotate(0);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -252,13 +252,20 @@ html body article #cash_flow .inner-container .switch button.inc {
 
 html body article #cash_flow .inner-container .switch button.exp {
   background-color: #971617;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
 }
 
 html body article #cash_flow .inner-container .switch button:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: scale(1.1) rotate(0deg);
+          transform: scale(1.1) rotate(0deg);
   -webkit-box-shadow: 0px 15px 45px 0px rgba(0, 0, 0, 0.28);
           box-shadow: 0px 15px 45px 0px rgba(0, 0, 0, 0.28);
+}
+
+html body article #cash_flow .inner-container .switch button:hover.exp {
+  -webkit-transform: scale(1.1) rotate(135deg);
+          transform: scale(1.1) rotate(135deg);
 }
 
 html body article #cash_flow .inner-container .expense__container {
